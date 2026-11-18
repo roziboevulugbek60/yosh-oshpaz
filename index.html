@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOSH OSHPAZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="logo">👨‍🍳 YOSH OSHPAZ</div>
+  <div class="stats">
+    <span>⭐ <b id="score">0</b></span>
+    <span>🏆 <b id="record">0</b></span>
+    <span>⏱️ <b id="timer">90</b></span>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div>
+      <p class="tag">🍽️ PAZANDACHILIK SARGUZASHTI</p>
+      <h1>Eng zo‘r oshpaz<br><span>bo‘lishga tayyormisan?</span></h1>
+      <p class="description">Buyurtmalarni bajar, mazali taomlar tayyorla va o‘z restoraningni rivojlantir!</p>
+      <button class="primary-btn" id="startBtn">▶ O‘YINNI BOSHLASH</button>
+    </div>
+    <div class="chef">👨‍🍳</div>
+  </section>
+
+  <section class="dashboard">
+    <div class="panel">
+      <div class="section-title">
+        <h2>📋 Mijoz buyurtmasi</h2>
+        <span class="status" id="gameStatus">Tayyor</span>
+      </div>
+
+      <div class="customer">
+        <div class="customer-avatar" id="customerAvatar">🧑</div>
+        <div>
+          <h3 id="customerName">Mijoz</h3>
+          <p id="customerText">O‘yin boshlanishini kutmoqda...</p>
+        </div>
+      </div>
+
+      <div class="order">
+        <div class="food-picture" id="orderPicture">🍕</div>
+        <div>
+          <h3 id="orderName">Pizza</h3>
+          <p id="orderReward">Mukofot: 100 ball</p>
+        </div>
+      </div>
+
+      <h3 class="small-title">Kerakli masalliqlar:</h3>
+      <div class="ingredients" id="ingredients"></div>
+
+      <button class="primary-btn cook-btn" id="cookBtn" disabled>
+        🍳 TAOMNI TAYYORLASH
+      </button>
+      <p id="feedback" class="feedback">O‘yinni boshlang!</p>
+    </div>
+
+    <div class="panel kitchen">
+      <div class="section-title">
+        <h2>🍳 Oshxona</h2>
+        <span class="level" id="level">1-bosqich</span>
+      </div>
+
+      <div class="kitchen-scene">
+        <div class="kitchen-window">🌤️</div>
+        <div class="shelf">🧂 🥫 🥛 🧀</div>
+        <div class="counter">
+          <div class="pan">🍳</div>
+          <div class="plate" id="plate">🍽️</div>
+        </div>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-label">
+          <span>Oshpazlik tajribasi</span>
+          <b id="progressText">0 / 300</b>
+        </div>
+        <div class="progress-bar"><div id="progress"></div></div>
+      </div>
+
+      <div class="section-title">
+        <h3>👨‍🍳 Oshpaz kiyimlari</h3>
+      </div>
+      <div class="clothes">
+        <button class="clothes-btn selected" data-clothes="👨‍🍳">👨‍🍳</button>
+        <button class="clothes-btn" data-clothes="🧑‍🍳">🧑‍🍳</button>
+        <button class="clothes-btn" data-clothes="👩‍🍳">👩‍🍳</button>
+        <button class="clothes-btn" data-clothes="🥷">🥷</button>
+        <span id="chefOutfit">Oddiy oshpaz</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel recipes">
+    <div class="section-title">
+      <h2>📖 Retseptlar</h2>
+      <span>Taomlar to‘plami</span>
+    </div>
+    <div class="recipe-list" id="recipeList"></div>
+  </section>
+
+  <section class="bottom-grid">
+    <div class="panel">
+      <h2>🏪 Mening restoranlarim</h2>
+      <div class="restaurant-card">
+        <div class="restaurant-icon">🍴</div>
+        <div>
+          <h3 id="restaurantName">Kichik oshxona</h3>
+          <p id="restaurantInfo">Birinchi restoraning. Yaxshi xizmat ko‘rsat!</p>
+        </div>
+      </div>
+      <button class="secondary-btn" id="upgradeBtn">🔓 Yangi restoran ochish — 500 ball</button>
+    </div>
+
+    <div class="panel">
+      <h2>📊 O‘yin natijalari</h2>
+      <div class="result-row"><span>Jami tayyorlangan taomlar</span><b id="totalMeals">0</b></div>
+      <div class="result-row"><span>Muvaffaqiyatli buyurtmalar</span><b id="successCount">0</b></div>
+      <div class="result-row"><span>Restoranlar</span><b id="restaurantCount">1</b></div>
+      <div class="result-row"><span>Bosqich</span><b id="levelResult">1</b></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 YOSH OSHPAZ | Ulug'bek Ro'ziboev</footer>
+
+<div class="modal" id="resultModal">
+  <div class="modal-content">
+    <div class="modal-emoji" id="modalEmoji">🎉</div>
+    <h2 id="modalTitle">Ajoyib!</h2>
+    <p id="modalText">Buyurtma bajarildi.</p>
+    <button class="primary-btn" id="nextBtn">Davom etish ➜</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
